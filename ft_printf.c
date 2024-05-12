@@ -6,7 +6,7 @@
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:33:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/12 18:44:24 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/12 18:53:36 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list		args;
-	// int			count;
+	// int			chara_len;
+/* 	The total number of characters printed, excluding the null-terminating byte.
+If an error occurs or an unsupported conversion specifier is encountered, it returns -1. */
 
 	if (!format)
 		return (0);
@@ -32,7 +34,7 @@ int	ft_printf(const char *format, ...)
 		{
 			++format;
 			if (*format == 'c')
-				ft_putchar('c');
+				return (ft_putchar('c'));
 			// if (*format == 's')
 			// 	return (); // %s Prints a string (as defined by the common C convention).
 			// if (*format == 'p')

@@ -6,12 +6,14 @@
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 18:15:50 by jjs               #+#    #+#             */
-/*   Updated: 2024/05/12 18:43:25 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/12 18:53:45 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-void	ft_putchar(char c)
+
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }
