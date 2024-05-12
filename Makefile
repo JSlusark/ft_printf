@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
+#    By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 15:25:10 by jslusark          #+#    #+#              #
-#    Updated: 2024/05/10 16:50:03 by jslusark         ###   ########.fr        #
+#    Updated: 2024/05/12 18:42:12 by jjs              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 OFILES = $(CFILES:.c=.o)
 
 CFILES = \
-ft_printft.c \
+ft_printf.c \
 ft_putchar.c
 
 all : $(NAME)

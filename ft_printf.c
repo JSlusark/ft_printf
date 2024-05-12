@@ -3,63 +3,61 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:33:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/10 16:53:13 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:44:24 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printft.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
 	va_list		args;
-	const char	*p;
 	// int			count;
-	int			x;
 
 	if (!format)
 		return (0);
-	p = format;
-	va_start(args, p);
+	va_start(args, format);
 	va_end(args);
 
-	while(*p)
+	while(*format)
 	{
-		if (*p != '%')
+		if (*format != '%')
 		{
-			ft_putchar(*p);
+			ft_putchar(*format);
 		}
 		else
 		{
-			++p;
-			if (*p == 'c')
-				ft_putchar(*p);
-			// if (*p == 's')
+			++format;
+			if (*format == 'c')
+				ft_putchar('c');
+			// if (*format == 's')
 			// 	return (); // %s Prints a string (as defined by the common C convention).
-			// if (*p == 'p')
+			// if (*format == 'p')
 			// 	return (); // %p The void * pointer argument has to be printed in hexadecimal format.
-			// if (*p == 'd')
+			// if (*format == 'd')
 			// 	return (); // %d Prints a decimal (base 10) number.
-			// if (*p == 'i')
+			// if (*format == 'i')
 			// 	return (); // %i Prints an integer in base 10.
-			// if (*p == 'u')
+			// if (*format == 'u')
 			// 	return (); // %u Prints an unsigned decimal (base 10) number.
-			// if (*p == 'x')
+			// if (*format == 'x')
 			// 	return (); // %x Prints a number in hexadecimal (base 16) lowercase format.
-			// if (*p == 'X')
+			// if (*format == 'X')
 			// 	return (); // %X Prints a number in hexadecimal (base 16) uppercase format.
-			// if (*p == '%')
+			// if (*format == '%')
 			// 	return (); // %% Prints a percent sign.
 		}
-		p++;
+		format++;
 	}
 	va_end(args);
+	return(6);
 }
 
-int main()
-{
-	my_printf("Hello %s, you scored %d%% on your C exam. Character: %c\n", "Alice", 95, 'A');
-	return (0);
-}
+// int main()
+// {
+// 	ft_printf("Hello %s, you scored %d%% on your C exam. Character: %c\n", "Alice", 95, 'A');
+// 	return (0);
+// }
