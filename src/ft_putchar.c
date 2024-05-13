@@ -5,12 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 16:51:07 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/10 16:51:41 by jslusark         ###   ########.fr       */
+/*   Created: 2024/05/12 18:15:50 by jjs               #+#    #+#             */
+/*   Updated: 2024/05/13 12:45:32 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c)
+#include "ft_printf.h"
+
+int	ft_putchar(char c)
 {
-	write(1, c, 1);
+	ft_putchar_fd(c, 1);
+	return (1);
 }
