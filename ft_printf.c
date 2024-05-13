@@ -6,16 +6,16 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:33:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/13 13:26:55 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/13 16:59:58 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_format_string(char format)
+static int	ft_convert(va_list args, const char format)
 {
 			if (format == 'c')
-				return (ft_putchar('c'));
+				return (ft_putchar((va_arg(format, int))));
 			// if (format == 's')
 			// 	return (); // %s Prints a string (as defined by the common C convention).
 			// if (format == 'p')
@@ -40,9 +40,6 @@ int	ft_printf(const char *format, ...)
 	va_list		args;
 	int			count;
 	int			p_count;
-	// int			chara_len;
-/* 	The total number of characters printed, excluding the null-terminating byte.
-If an error occurs or an unsupported conversion specifier is encountered, it returns -1. */
 
 	va_start(args, format);
 	count = 0;
@@ -52,13 +49,13 @@ If an error occurs or an unsupported conversion specifier is encountered, it ret
 
 	while (*format != '\0')
 	{
-		if (*format != '%')
+		if (*format == '%' && ft_strchar("cspdiuxX%", format++))
+			ft_convert(args, *format++);
+		else
 		{
 			ft_putchar_fd(*format, 1);
 			count++;
 		}
-		else
-			ft_format_string(*format++);
 		format++;
 	}
 	count = count + p_count;
