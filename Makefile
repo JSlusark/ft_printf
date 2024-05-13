@@ -6,7 +6,7 @@
 #    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 15:25:10 by jslusark          #+#    #+#              #
-#    Updated: 2024/05/13 14:04:55 by jslusark         ###   ########.fr        #
+#    Updated: 2024/05/13 15:21:25 by jslusark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,5 +47,3 @@ re: fclean all
 	@echo "--> Recompiled everything"
 
 .PHONY: all clean fclean re
-
-.SILENT:
