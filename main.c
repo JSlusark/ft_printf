@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/12 18:15:50 by jjs               #+#    #+#             */
-/*   Updated: 2024/05/13 19:25:25 by jslusark         ###   ########.fr       */
+/*   Created: 2024/05/13 18:56:16 by jslusark          #+#    #+#             */
+/*   Updated: 2024/05/13 19:00:10 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <ft_printf.h>
 
-int	ft_putchar(char c)
+int	main(void)
 {
-	ft_putchar_fd(c, 1);
-	return (1);
+	// ft_printf("Hello %s, you scored %d%% on your C exam. Character: %c\n", "Alice", 95, 'A');
+	ft_printf("%c", 'A');
+	return (0);
 }

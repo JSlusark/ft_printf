@@ -6,16 +6,16 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:33:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/13 16:59:58 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/13 18:58:07 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <ft_printf.h>
 
 static int	ft_convert(va_list args, const char format)
 {
 			if (format == 'c')
-				return (ft_putchar((va_arg(format, int))));
+				return (ft_putchar((va_arg(args, int))));
 			// if (format == 's')
 			// 	return (); // %s Prints a string (as defined by the common C convention).
 			// if (format == 'p')
@@ -39,18 +39,16 @@ int	ft_printf(const char *format, ...)
 {
 	va_list		args;
 	int			count;
-	int			p_count;
 
 	va_start(args, format);
 	count = 0;
-	p_count = 0;
 	if (!format)
 		return (0);
 
 	while (*format != '\0')
 	{
-		if (*format == '%' && ft_strchar("cspdiuxX%", format++))
-			ft_convert(args, *format++);
+		if (*format == '%' && ft_strchr("cspdiuxX%", *format++))
+			count = ft_convert(args, *format);
 		else
 		{
 			ft_putchar_fd(*format, 1);
@@ -58,13 +56,6 @@ int	ft_printf(const char *format, ...)
 		}
 		format++;
 	}
-	count = count + p_count;
 	va_end(args);
 	return (count);
 }
-
-// int main()
-// {
-// 	ft_printf("Hello %s, you scored %d%% on your C exam. Character: %c\n", "Alice", 95, 'A');
-// 	return (0);
-// }
