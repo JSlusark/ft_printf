@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:33:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/13 18:58:07 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/14 16:36:29 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ static int	ft_convert(va_list args, const char format)
 			// 	return (); // %x Prints a number in hexadecimal (base 16) lowercase format.
 			// if (format == 'X')
 			// 	return (); // %X Prints a number in hexadecimal (base 16) uppercase format.
-			// if (format == '%')
-			// 	return (); // %% Prints a percent sign.
+			if (format == '%')
+				return (ft_putchar('%')); // %% Prints a percent sign.
 			return(0);
 }
 
@@ -48,11 +48,10 @@ int	ft_printf(const char *format, ...)
 	while (*format != '\0')
 	{
 		if (*format == '%' && ft_strchr("cspdiuxX%", *format++))
-			count = ft_convert(args, *format);
+			count = count + ft_convert(args, *format);
 		else
 		{
-			ft_putchar_fd(*format, 1);
-			count++;
+			count = count + ft_putchar(*format);
 		}
 		format++;
 	}
