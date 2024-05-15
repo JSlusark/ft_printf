@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 14:12:45 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/15 16:51:45 by jslusark         ###   ########.fr       */
+/*   Created: 2024/05/15 12:27:58 by jslusark          #+#    #+#             */
+/*   Updated: 2024/05/15 16:47:31 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft.h"
-# include <stdarg.h>
-# include <limits.h>
-# include <unistd.h>
+int	ft_putstr(char *str)
+{
+	int	len;
 
-int		ft_printf(const char *format, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *str);
-//other funcs
+	if(!str)
+		str = "(null)";
+	len = ft_strlen(str);
+	while (*str)
+	{
+		ft_putchar(*str);
+		str++;
+	}
 
-#endif
+	return (len);
+}
