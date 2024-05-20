@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putunsigned.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 14:12:45 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/20 22:02:11 by jjs              ###   ########.fr       */
+/*   Created: 2024/05/20 21:52:53 by jjs               #+#    #+#             */
+/*   Updated: 2024/05/20 23:00:10 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include "libft.h"
-# include <stdarg.h>
-# include <limits.h>
-# include <unistd.h>
+int	ft_putunsigned(unsigned int num)
+{
+	int	length;
 
-int		ft_printf(const char *format, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *str);
-int		ft_putnum(int num);
-int		ft_putunsigned(unsigned int num);
-//other funcs
-
-#endif
+	length = 0;
+	if (num == 0)
+	{
+		ft_putchar('0');
+		return (1);
+	}
+	if (num >= 10)
+	{
+		ft_putnum(num / 10);
+	}
+	ft_putchar('0' + num % 10);
+	while (num != 0)
+	{
+		length++;
+		num = (num / 10);
+	}
+	return (length);
+}

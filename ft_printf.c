@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:33:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/20 16:58:33 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/20 22:01:47 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_convert(va_list args, const char format)
 	if (format == 'i' || format == 'd')
 		return (ft_putnum(va_arg(args, int))); // %i Prints an integer in base 10.
 	if (format == 'u')
-		return (ft_putnum(va_arg(args, unsigned int))); // %i Prints an integer in base 10.
+		return (ft_putunsigned(va_arg(args, unsigned int))); // %i Prints an integer in base 10.
 			// if (format == 'u')
 			// 	return (); // %u Prints an unsigned decimal (base 10) number.
 			// if (format == 'x')

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
+#    By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 15:25:10 by jslusark          #+#    #+#              #
-#    Updated: 2024/05/20 13:46:51 by jslusark         ###   ########.fr        #
+#    Updated: 2024/05/20 22:01:49 by jjs              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ CFILES = \
 ft_printf.c \
 src/ft_putchar.c \
 src/ft_putstr.c \
-src/ft_putnum.c
+src/ft_putnum.c \
+src/ft_putunsigned.c
 
 all : $(NAME)
 	@echo "--> Created file"
