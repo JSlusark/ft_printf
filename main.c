@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:56:16 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/18 18:57:35 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/20 16:42:55 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(void)
 	printf("\n");
 */
 
-
+/*
 	//________________________________MY TESTS %c__________________________________________
 	printf("___________________________MY TESTS %%c_________________________________\n\n");
 	printf("My test 1: print(\"hello %%c %%c %%c %%c\", 'j', 'e', 's', 's')\n");
@@ -83,27 +83,12 @@ int	main(void)
 	func_c = printf(" %c", '~' + 1);
 	printf(" <- args, o printft returns: %d\n", func_c);
 	printf("\n"); // ~ becomes DEL is not printable therefore does not show
-
-	printf("My test 4: print(\" %%c %%c %%c \", '1', '0', '7')\n");
-	mine_c = ft_printf(" %c %c %c ", '1', '0', '7');
-	printf(" <- args, my printft returns: %d\n", mine_c);
-	func_c = printf(" %c %c %c ", '1', '0', '7');
-	printf(" <- args, o printft returns: %d\n", func_c);
-	printf("\n");
-
-	printf("My test 5: print(\" %%c %%c %%c \", 'a', 'z', 'b')\n");
-	mine_c = ft_printf(" %c %c %c ", 'a', 'z', 'b');
-	printf(" <- args, my printft returns: %d\n", mine_c);
-	func_c = printf(" %c %c %c ", 'a', 'z', 'b');
-	printf(" <- args, o printft returns: %d\n", func_c);
-	printf("\n");
-
-
+*/
 
 //%s
-/*
-	// TEST(3, print("%s ", ""));
-	//________________________________FRANCI TESTS %s__________________________________________
+	// ft_printf("Hello %s, you scored %d%% on your C exam. Character: %c\n", "Alice", 95, 'A');
+/* // TEST(3, print("%s ", ""));
+	//________________________________MY TESTS %s__________________________________________
 	printf("___________________________FRANCI TESTS %%s_________________________________\n\n");
 	// 3
 	printf("test 3: print(\"%%s \", \"\")\n");
@@ -127,11 +112,73 @@ int	main(void)
 	func_c = printf("character name: %s", "Jess");
 	printf(" <- args, o printft returns: %d\n", func_c);
 	printf("\n");
-*/
-
+	 */
 	//%p
 	//%d
-	//%i
+
+//%i
+	//________________________________MY TESTS i__________________________________________
+		printf("___________________________MY TESTS i & d_________________________________\n\n");
+		printf("My test 1: print(\"Coding is my number %%i priority\")\n");
+		mine_c = ft_printf("Coding is my number %i priority", 1);
+		printf(" <- args, my printft returns: %i\n", mine_c);
+		func_c = printf("Coding is my number %i priority", 1);
+		printf(" <- args, o printft returns: %i\n", func_c);
+		printf("\n");
+
+		printf("My test 2: print(\"I have %%i problems and you're not %%i of them\")\n");
+		mine_c = ft_printf("I have %i problems and you're not %i of them", 99, 1);
+		printf(" <- args, my printft returns: %d\n", mine_c);
+		func_c = printf("I have %i problems and you're not %i of them", 99, 1);
+		printf(" <- args, o printft returns: %d\n", func_c);
+		printf("\n");
+
+		printf("My test 3: print(\"Hope you not score %%i at the exam\")\n");
+		mine_c = ft_printf("Hope you not score %i at the exam", -42);
+		printf(" <- args, my printft returns: %d\n", mine_c);
+		func_c = printf("Hope you not score %i at the exam", -42);
+		printf(" <- args, o printft returns: %d\n", func_c);
+		printf("\n");
+
+		printf("My test 4: print(\"Zero value: %%i\")\n");
+		mine_c = ft_printf("Zero value: %i", 0);
+		printf(" <- args, my printft returns: %d\n", mine_c);
+		func_c = printf("Zero value: %i", 0);
+		printf(" <- args, o printft returns: %d\n", func_c);
+		printf("\n");
+
+// need to chek if ok
+		printf("My test 5: print(\"Min and max edgecases: %%i %%i %%i %%i %%i %%i %%i\")\n");
+		mine_c = ft_printf("Min and max edgecases: %i %i %i %i %i %i %i", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, LLONG_MAX, LLONG_MIN, ULONG_MAX);
+		printf(" <- args, my printft returns: %d\n", mine_c);
+		func_c = printf("Min and max edgecases: %i %i %li %li %lld %lli %lu", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, LLONG_MAX, LLONG_MIN, ULONG_MAX);
+		printf(" <- args, o printft returns: %d\n", func_c);
+		printf("\n");
+
+		unsigned int one= -1;
+		printf("My test 6: print(\"Unsigned: %%u\")\n");
+		mine_c = ft_printf("Unsigned: %u", one);
+		printf(" <- args, my printft returns: %d\n", mine_c);
+		func_c = printf("Unsigned: %u",one);
+		printf(" <- args, o printft returns: %d\n", func_c);
+		printf("\n");
+
+
+
+		// printf("My test 2: print(\" %i %i %i %i \")\n");
+		// mine_c = ft_printf(" %i %i %i %i ");
+		// printf(" <- args, my printft returns: %d\n", mine_c);
+		// func_c = printf(" %i %i %i %i ");
+		// printf(" <- args, o printft returns: %d\n", func_c);
+		// printf("\n");
+
+		// printf("My test 2: print(\" %i100 %i50 %i25 %i0 \")\n");
+		// mine_c = ft_printf(" %i100 %i50 %i25 %i0 ");
+		// printf(" <- args, my printft returns: %d\n", mine_c);
+		// func_c = printf(" %i100 %i50 %i25 %i0 ");
+		// printf(" <- args, o printft returns: %d\n", func_c);
+		// printf("\n");
+
 	//%u
 	//%x
 	//%X
@@ -162,8 +209,5 @@ int	main(void)
 		printf("\n");
 	*/
 
-
-
-	// ft_printf("Hello %s, you scored %d%% on your C exam. Character: %c\n", "Alice", 95, 'A');
 	return (0);
 }

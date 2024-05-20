@@ -6,7 +6,7 @@
 #    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 15:25:10 by jslusark          #+#    #+#              #
-#    Updated: 2024/05/15 12:38:02 by jslusark         ###   ########.fr        #
+#    Updated: 2024/05/20 13:46:51 by jslusark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ OFILES = $(CFILES:.c=.o)
 CFILES = \
 ft_printf.c \
 src/ft_putchar.c \
-src/ft_putstr.c
+src/ft_putstr.c \
+src/ft_putnum.c
 
 all : $(NAME)
 	@echo "--> Created file"
