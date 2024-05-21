@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+         #
+#    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 15:25:10 by jslusark          #+#    #+#              #
-#    Updated: 2024/05/20 22:01:49 by jjs              ###   ########.fr        #
+#    Updated: 2024/05/21 17:14:05 by jslusark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,12 @@ OFILES = $(CFILES:.c=.o)
 
 CFILES = \
 ft_printf.c \
-src/ft_putchar.c \
-src/ft_putstr.c \
-src/ft_putnum.c \
-src/ft_putunsigned.c
+src/ft_printchar.c \
+src/ft_printstr.c \
+src/ft_printnum.c \
+src/ft_printunsigned.c \
+src/ft_printhex.c \
+src/ft_printpointer.c
 
 all : $(NAME)
 	@echo "--> Created file"

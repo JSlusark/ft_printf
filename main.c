@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:56:16 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/20 16:42:55 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/21 17:02:07 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,10 +114,9 @@ int	main(void)
 	printf("\n");
 	 */
 	//%p
-	//%d
 
-//%i
-	//________________________________MY TESTS i__________________________________________
+//%i & %d
+/* 	//________________________________MY TESTS i__________________________________________
 		printf("___________________________MY TESTS i & d_________________________________\n\n");
 		printf("My test 1: print(\"Coding is my number %%i priority\")\n");
 		mine_c = ft_printf("Coding is my number %i priority", 1);
@@ -161,7 +160,7 @@ int	main(void)
 		printf(" <- args, my printft returns: %d\n", mine_c);
 		func_c = printf("Unsigned: %u",one);
 		printf(" <- args, o printft returns: %d\n", func_c);
-		printf("\n");
+		printf("\n"); */
 
 
 
@@ -181,6 +180,26 @@ int	main(void)
 
 	//%u
 	//%x
+		printf("___________________________MY TESTS x & X_________________________________\n\n");
+		mine_c = ft_printf("Hex of %i: %x", 20, 20);
+		printf(" <- args, my printft returns: %d\n", mine_c);
+		func_c = printf("Hex of %i: %x", 20, 20);
+		printf(" <- args, o printft returns: %d\n", func_c);
+		printf("\n");
+
+		mine_c = ft_printf("Hex of %i: %X", 50, 50);
+		printf(" <- args, my printft returns: %d\n", mine_c);
+		func_c = printf("Hex of %i: %X", 50, 50);
+		printf(" <- args, o printft returns: %d\n", func_c);
+		printf("\n");
+
+		mine_c = ft_printf("Hex of %i: %X", 927819203, 927819203);
+		printf(" <- args, my printft returns: %d\n", mine_c);
+		func_c = printf("Hex of %i: %X", 927819203, 927819203);
+		printf(" <- args, o printft returns: %d\n", func_c);
+		printf("\n");
+
+
 	//%X
 
 //%%
