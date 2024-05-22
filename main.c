@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:56:16 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/22 13:46:20 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:39:59 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,12 +124,25 @@ int	main(void)
 		printf(" <- args, o printft returns: %i\n", func_c);
 		printf("\n");
 
-		printf("My test 1: print(\" %%p %%p \", INT_MIN, INT_MAX\")\n");
+		printf("My test 2: print(\" %%p %%p \", INT_MIN, INT_MAX\")\n");
 		mine_c = ft_printf(" %p %p ", (void *)INT_MIN, (void *)INT_MAX);
 		printf(" <- args, my printft returns: %i\n", mine_c);
 		func_c = printf(" %p %p ", (void *)INT_MIN, (void *)INT_MAX);
 		printf(" <- args, o printft returns: %i\n", func_c);
 		printf("\n");
+
+		printf("My test 2: print(\" %%p %%p \", 0, 0\")\n");
+		mine_c = ft_printf(" %p %p ", (void *)0, (void *)0);
+		printf(" <- args, my printft returns: %i\n", mine_c);
+		func_c = printf(" %p %p ", (void *)0, (void *)0);
+		printf(" <- args, o printft returns: %i\n", func_c);
+		printf("\n");
+
+		printf(" MINE: %i\n", func_c);
+		printf("INTMIN: %d INTMAX: %d\n", INT_MIN, INT_MAX);
+		printf(" MINE: %i\n", mine_c);
+		ft_printf("INTMIN: %d INTMAX: %d\n", INT_MIN, INT_MAX);
+
 
 //%i & %d
 /* 	//________________________________MY TESTS i__________________________________________
