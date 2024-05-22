@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printstr.c                                        :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 12:27:58 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/21 13:02:51 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:56:48 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_printstr(char *str)
 {
 	int	len;
 
-	if(!str)
+	if (!str)
 		str = "(null)";
 	len = ft_strlen(str);
 	while (*str)
@@ -24,6 +24,5 @@ int	ft_printstr(char *str)
 		ft_printchar(*str);
 		str++;
 	}
-
 	return (len);
 }

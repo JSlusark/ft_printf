@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:56:16 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/21 17:02:07 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/22 13:46:20 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,22 @@ int	main(void)
 	printf("\n");
 	 */
 	//%p
+	// TEST(6, print(" %p %p ", LONG_MIN, LONG_MAX));
+	//________________________________FRANCI TESTS p__________________________________________
+		printf("___________________________FRANCI TEST p_________________________________\n\n");
+		printf("My test 1: print(\" %%p %%p \", LONG_MIN, LONG_MAX\")\n");
+		mine_c = ft_printf(" %p %p ", (void *)LONG_MIN, (void *)LONG_MAX);
+		printf(" <- args, my printft returns: %i\n", mine_c);
+		func_c = printf(" %p %p ", (void *)LONG_MIN, (void *)LONG_MAX);
+		printf(" <- args, o printft returns: %i\n", func_c);
+		printf("\n");
+
+		printf("My test 1: print(\" %%p %%p \", INT_MIN, INT_MAX\")\n");
+		mine_c = ft_printf(" %p %p ", (void *)INT_MIN, (void *)INT_MAX);
+		printf(" <- args, my printft returns: %i\n", mine_c);
+		func_c = printf(" %p %p ", (void *)INT_MIN, (void *)INT_MAX);
+		printf(" <- args, o printft returns: %i\n", func_c);
+		printf("\n");
 
 //%i & %d
 /* 	//________________________________MY TESTS i__________________________________________
@@ -180,7 +196,7 @@ int	main(void)
 
 	//%u
 	//%x
-		printf("___________________________MY TESTS x & X_________________________________\n\n");
+/* 		printf("___________________________MY TESTS x & X_________________________________\n\n");
 		mine_c = ft_printf("Hex of %i: %x", 20, 20);
 		printf(" <- args, my printft returns: %d\n", mine_c);
 		func_c = printf("Hex of %i: %x", 20, 20);
@@ -197,7 +213,7 @@ int	main(void)
 		printf(" <- args, my printft returns: %d\n", mine_c);
 		func_c = printf("Hex of %i: %X", 927819203, 927819203);
 		printf(" <- args, o printft returns: %d\n", func_c);
-		printf("\n");
+		printf("\n"); */
 
 
 	//%X

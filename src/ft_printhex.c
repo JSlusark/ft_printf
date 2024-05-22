@@ -6,51 +6,23 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:30:49 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/21 16:35:30 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:57:38 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexlen(unsigned int num)
-{
-	int	length;
-
-	length = 0;
-	while (num != 0)
-	{
-		num = num / 16;
-		length++;
-	}
-	return (length);
-}
-
-void	ft_hexconvert(unsigned int num, const char format)
-{
-	if (num >= 16)
-	{
-		ft_hexconvert(num / 16, format);
-		ft_hexconvert(num % 16, format);
-	}
-	else
-	{
-		if (num <= 9)
-			ft_printchar((num + '0'));
-		else
-		{
-			if (format == 'x')
-				ft_printchar((num - 10 + 'a'));
-			if (format == 'X')
-				ft_printchar((num - 10 + 'A'));
-		}
-	}
-}
-
 int	ft_printhex(unsigned int num, char format)
 {
-	if (num == 0)
-		return (write(1, "0", 1));
-	else
-		ft_hexconvert(num, format);
-	return (ft_hexlen(num));
+	int		count;
+	char	*hex_digits;
+
+	count = 0;
+	hex_digits = "0123456789abcdef";
+	if (format == 'X')
+		hex_digits = "0123456789ABCDEF";
+	if (num >= 16)
+		count += ft_printhex(num / 16, format);
+	count += ft_printchar(hex_digits[num % 16]);
+	return (count);
 }
