@@ -12,19 +12,28 @@
 
 #include "ft_printf.h"
 
-int	ft_printpointer(void *ptr)
+int	ft_printhexp(uintptr_t num)
 {
-	int				count;
-	unsigned long	address;
+	int count = 0;
+	char *hex_digits = "0123456789abcdef";
 
-	count = 0;
-	if (ptr == 0)
-	{
-		count += write (1, "(nil)", 5);
-		return (count);
-	}
-	address = (unsigned long)ptr;
-	count += ft_printstr("0x");
-	count += ft_printhex(address, 'p');
+	if (num >= 16)
+		count += ft_printhexp(num / 16);
+	count += ft_printchar(hex_digits[num % 16]);
 	return (count);
 }
+
+int	ft_printpointer(uintptr_t ptr)
+{
+	int count = 0;
+
+	if (ptr == 0)
+	{
+		count += write(1, "0x0", 3); // check if this case changes on linux
+		return count;
+	}
+	count += ft_printstr("0x");
+	count += ft_printhexp(ptr);
+	return (count);
+}
+

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 14:12:45 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/22 13:53:11 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/23 18:24:40 by jjs              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_printstr(char *str);
 int		ft_printnum(long int num);
 int		ft_printunsigned(unsigned int num);
 int		ft_printhex(unsigned int num, char format);
-int		ft_printpointer(void *ptr);
+int ft_printpointer(uintptr_t ptr);
 //other funcs
 
 #endif
