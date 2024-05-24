@@ -6,7 +6,7 @@
 #    By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 11:53:09 by jessica           #+#    #+#              #
-#    Updated: 2024/05/13 14:02:02 by jslusark         ###   ########.fr        #
+#    Updated: 2024/05/24 17:21:02 by jslusark         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,11 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I../headers
 OFILES = $(CFILES:.c=.o)
+
+GREEN = \033[0;32m
+YELLOW = \033[0;33m
+RED = \033[0;31m
+RESET = \033[0m
 
 CFILES = \
 ft_isalpha.c \
@@ -55,24 +60,34 @@ ft_split.c
 
 
 all : $(NAME)
-	@echo "--> Created file"
+	@echo "$(YELLOW)All $(NAME)'s files are up-to-date$(RESET)"
 
 $(NAME) : $(OFILES)
 	ar rcs $(NAME) $(OFILES)
-	@echo "--> Library archived and indexed"
+	@echo "$(GREEN)--> $(NAME) library archived and indexed$(RESET)"
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+	@echo "$(GREEN)--> Compiled $(NAME)'s .c files to .o $<$(RESET)"
 
 clean:
 	rm -f $(OFILES)
-	@echo "--> Removed object files"
+	@echo "$(RED)--> Removed $(NAME)'s object files$(RESET)"
 
 fclean: clean
 	rm -f $(NAME)
-	@echo "--> Removed $(NAME) file"
+	@echo "$(RED)--> Removed $(NAME) library$(RESET)"
 
 re: fclean all
-	@echo "--> Recompiled everything"
+	@echo "$(GREEN)--> Recompilation successful!$(RESET)"
+
+%:
+	@echo "$(RED)Error: target '$@' is not a valid target.$(RESET)"
+	@echo "Please use one of the following valid targets:"
+	@echo "- $(GREEN)make$(RESET): compiles the project"
+	@echo "- $(GREEN)make re$(RESET): recompiles the project"
+	@echo "- $(GREEN)make clean$(RESET): removes object files"
+	@echo "- $(GREEN)make fclean$(RESET): removes object files and the final library"
+	@exit 1
 
 .PHONY: all clean fclean re
