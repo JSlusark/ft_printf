@@ -6,13 +6,13 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:23:31 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/22 12:56:06 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/24 14:06:46 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printnum(long int num)
+int	ft_printnum(int num)
 {
 	char	*conv;
 	int		len;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjs <jjs@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 11:53:39 by jessica           #+#    #+#             */
-/*   Updated: 2024/05/23 18:22:56 by jjs              ###   ########.fr       */
+/*   Updated: 2024/05/24 13:40:47 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdint.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
