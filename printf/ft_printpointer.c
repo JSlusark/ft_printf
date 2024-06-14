@@ -6,13 +6,13 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 14:17:10 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/24 14:19:49 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/06/14 15:40:03 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printhexp(uintptr_t num)
+static int	ft_printhexp(uintptr_t num)
 {
 	int		count;
 	char	*hex_digits;

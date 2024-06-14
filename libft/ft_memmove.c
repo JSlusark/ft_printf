@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:11 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 13:15:58 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/06/14 14:55:46 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest_ptr);
 }
-/* #include <stdio.h>
-int main(void)
-{
-	char	string1[10] = "aaaaaaaaaa";
-	char	string2[10] = "bbbbbbbbbb";
-	printf("%s\n", (char*)ft_memmove(string1, string2, 5));
-	printf("%s\n", (char*)memmove(string1, string2, 5));
-
-	char	string3[13] = "aaaaaaaaaaaaa";
-	char	string4[10] = "bbbbbbbbbb";
-	printf("%s\n", (char*)ft_memmove(string3, string4, 5));
-	printf("%s\n", (char*)memmove(string3, string4, 5));
-} */

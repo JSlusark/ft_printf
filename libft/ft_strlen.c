@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:27 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 10:53:57 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/06/14 14:56:56 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,3 @@ size_t	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
-/* #include <stdio.h>
-int	main(void)
-{
-	printf("%zu\n", ft_strlen("123456")); //6
-	printf("%zu\n", ft_strlen("123")); //3
-	printf("%zu\n", ft_strlen("Hello World")); //11
-	printf("%zu\n", ft_strlen("/&90hsb\'s^-")); //11
-	printf("%zu\n", ft_strlen("X")); //1
-} //ok */

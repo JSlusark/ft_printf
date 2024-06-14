@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:18:26 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 14:30:30 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/06/14 14:57:32 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-/* #include <stdio.h>
-int	main(void)
-{
-	printf("%s", ft_substr("I am going home", 6, 7));
-} */
