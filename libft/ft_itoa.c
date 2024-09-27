@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:11:26 by jslusark          #+#    #+#             */
-/*   Updated: 2024/06/14 14:55:20 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:24:26 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,13 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+// #include <stdio.h>
+// #include <limits.h>
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(1300));
+// 	printf("%s\n", ft_itoa(100));
+// 	printf("%s\n", ft_itoa(-300)); //1316
+// 	printf("%s\n", ft_itoa(INT_MIN)); //-2147483648
+// 	printf("%s\n", ft_itoa(INT_MAX)); //2147483647
+// }

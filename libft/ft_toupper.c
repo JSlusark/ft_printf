@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:52:36 by jslusark          #+#    #+#             */
-/*   Updated: 2024/06/14 14:57:40 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:57:13 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,12 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
+/* #include <stdio.h>
+int	main(void)
+{
+	printf("%c\n", ft_toupper('a')); //A
+	printf("%c\n", ft_toupper('b')); //B
+	printf("%c\n", ft_toupper('y')); //Y
+	printf("%c\n", ft_toupper('x')); //X
+	printf("%c\n", ft_toupper('z')); //Z
+}*/

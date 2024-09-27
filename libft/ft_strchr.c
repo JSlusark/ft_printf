@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:49:18 by jslusark          #+#    #+#             */
-/*   Updated: 2024/06/14 14:56:27 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:06:57 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,11 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
+/* #include<stdio.h>
+int	main(void)
+{
+	// returns a pointer to the first occurence of c
+	printf("%s\n", ft_strchr("teste",'e'));
+	printf("%s\n", ft_strchr("teste", '\0'));
+	printf("%s\n", ft_strchr("pepe y cparlos",'c'));
+} */

@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 18:56:16 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/24 14:12:49 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:31:19 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -477,5 +477,26 @@ printf("\033[36m___________________________TESTING %%x & %%X____________________
 		printf(" <- args, o printf returns: %i\n", func_c);
 		printf("\n");
 
+		printf("\033[34m___________________________TESTING MIXED FORMATS IN THE SAME PHRASE_________________________________\n\n\033[0m");
+		printf("My test 1: print(\"Name: %%s, Score: %%d, Grade: %%c\", \"Alice\", 95, 'A')\n");
+		mine_c = ft_printf("Name: %s, Score: %d, Grade: %c", "Alice", 95, 'A');
+		printf(" <- args, my printf returns: %d\n", mine_c);
+		func_c = printf("Name: %s, Score: %d, Grade: %c", "Alice", 95, 'A');
+		printf(" <- args, o printf returns: %d\n", func_c);
+		printf("\n");
+
+		printf("My test 2: print(\"ID: %%u, Hex value: %%x, Letter: %%c\", 4294967295, 255, 'F')\n");
+		mine_c = ft_printf("ID: %u, Hex value: %x, Letter: %c", 4294967295U, 255, 'F');
+		printf(" <- args, my printf returns: %d\n", mine_c);
+		func_c = printf("ID: %u, Hex value: %x, Letter: %c", 4294967295U, 255, 'F');
+		printf(" <- args, o printf returns: %d\n", func_c);
+		printf("\n");
+
+		printf("My test 3: print(\"Progress: %%d%%%%, Status: %%s\", (int)(0.75 * 100), \"Complete\")\n");
+		mine_c = ft_printf("Progress: %d%%, Status: %s", (int)(0.75 * 100), "Complete");
+		printf(" <- args, my printf returns: %d\n", mine_c);
+		func_c = printf("Progress: %d%%, Status: %s", (int)(0.75 * 100), "Complete");
+		printf(" <- args, o printf returns: %d\n", func_c);
+		printf("\n");
 	return (0);
 }

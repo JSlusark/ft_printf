@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:48:14 by jslusark          #+#    #+#             */
-/*   Updated: 2024/06/14 14:55:14 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/05/07 10:23:38 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,14 @@ int	ft_isprint(int c)
 	}
 	return (0);
 }
+/* #include <stdio.h>
+int	main(void)
+{
+	printf("y %i\n", ft_isprint('a'));
+	printf("n %i\n", ft_isprint('\b'));
+	printf("n %i\n", ft_isprint(190));
+	printf("y %i\n", ft_isprint('%'));
+	printf("y %i\n", ft_isprint('-'));
+	printf("y %i\n", ft_isprint('|'));
+	printf("n %i\n", ft_isprint('\t'));
+} */
