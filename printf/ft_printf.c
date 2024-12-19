@@ -6,11 +6,11 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:33:48 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/24 14:14:05 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/06/14 16:22:37 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
+#include "ft_printf.h"
 
 static int	ft_convert(va_list args, const char format)
 {
@@ -25,7 +25,7 @@ static int	ft_convert(va_list args, const char format)
 	if (format == 'p')
 		return (ft_printpointer(va_arg(args, uintptr_t)));
 	if (format == 'x' || format == 'X')
-		return (ft_printhex(va_arg(args, int), format));
+		return (ft_printhex(va_arg(args, unsigned int), format));
 	if (format == '%')
 		return (ft_printchar('%'));
 	return (0);

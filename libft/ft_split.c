@@ -6,7 +6,7 @@
 /*   By: jslusark <jslusark@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:44:06 by jslusark          #+#    #+#             */
-/*   Updated: 2024/05/07 15:53:25 by jslusark         ###   ########.fr       */
+/*   Updated: 2024/06/14 14:56:23 by jslusark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,33 +80,3 @@ char	**ft_split(char const *s, char c)
 	result[w_i] = NULL;
 	return (result);
 }
-/* #include <stdio.h>
-void print_result(char **result) {
-    if (result) {
-        for (int i = 0; result[i] != NULL; i++) {
-            printf("'%s'\n", result[i]);
-            free(result[i]);  // Free each string after printing
-        }
-        free(result);  // Finally free the result array
-    }
-}
-int main(void) {
-    char **result;
-
-    // Test 1: Basic functionality
-    result = ft_split("hello world here", ' ');
-    printf("Test 1:\n");
-    print_result(result);
-
-    // Test 2: Delimiter at the start and end
-    result = ft_split(" test split case ", ' ');
-    printf("Test 2:\n");
-    print_result(result);
-
-    // Test 3: Consecutive delimiters
-    result = ft_split("hello  world  here", ' ');
-    printf("Test 3:\n");
-    print_result(result);
-
-    return 0;
-} */
